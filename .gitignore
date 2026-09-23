@@ -1,0 +1,46 @@
+# --- Datasets & generated data (never commit these — huge, and often licensed) ---
+culane_night_test/
+culane_night_lane_only/
+culane_night_lane_only_debug/
+culane_night_heldout_raw/
+culane_night_heldout_enhanced/
+culane_night_selective/
+culane_night_aware/
+culane_night_visual_check/
+datasets/
+*.lines.txt
+
+# --- Model checkpoints / weights (large binary files — use Git LFS or external storage instead) ---
+*.pth
+*.pt
+*.ckpt
+work_dirs/
+
+# --- Result dumps produced by the eval scripts ---
+*_perimage_*.json
+culane_night_worst_*.txt
+culane_night_eval_perimage_*.json
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.jpg
+!docs/**/*.png
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+
+# --- Caches ---
+cache/
+*.pkl
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,24 @@
+# Starting point only — this repo's scripts were developed and run in a
+# conda environment named clrnet_torch113. Adjust the pinned versions below
+# to match what your CUDA driver and CLRNet's own requirements.txt need;
+# this file is a best-effort reconstruction, not an exported lockfile.
+#
+# Create with:   conda env create -f environment.yml
+# Then also install CLRNet's own requirements.txt from inside your CLRNet
+# checkout, since CLRNet itself is a separate repository not included here.
+
+name: clrnet_torch113
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pytorch=1.13.*
+  - torchvision
+  - pip
+  - pip:
+      - opencv-python
+      - numpy
+      - # --- install CLRNet's own requirements.txt here too, e.g.: ---
+      # - -r /path/to/CLRNet/requirements.txt
